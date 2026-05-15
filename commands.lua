@@ -35,10 +35,4 @@ ashita.events.register('command', 'command_cb', function (e)
         Message(string.format("Display is now $H%s$R.", gToggleHide and "hidden" or "visible"));
         return;
     end
-
-    if (#args > 1) and (string.lower(args[2]) == 'pulsetest') then
-        gPulseTest = not gPulseTest;
-        Message(string.format("Ready pulse preview is now $H%s$R. (Affects all macros with Ready Pulse enabled, regardless of cooldown.)", gPulseTest and "ON" or "OFF"));
-        return;
-    end
 end);

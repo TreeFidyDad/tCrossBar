@@ -216,7 +216,7 @@ function Element:RenderIcon(sprite)
         vec_position.x = positionX + layout.Icon.OffsetX;
         vec_position.y = positionY + layout.Icon.OffsetY;
         local opacity = d3dwhite;
-        if (gSettings.ShowReadyPulse) and (self.Binding.ShowReadyPulse) and (self.State.Available) and ((self.State.Ready) or (gPulseTest)) then
+        if (gSettings.ShowReadyPulse) and (self.Binding.ShowReadyPulse) and (self.State.Available) and (self.State.Ready) then
             local floor = gSettings.ReadyPulseMinAlpha or 0.45;
             if (floor < 0) then floor = 0; elseif (floor > 1) then floor = 1; end
             local hz = gSettings.ReadyPulseHz or 1.0;

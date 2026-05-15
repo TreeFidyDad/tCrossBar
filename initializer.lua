@@ -13,7 +13,6 @@ local d3d8       = require('d3d8');
 local ffi        = require('ffi');
 local scaling    = require('scaling');
 gToggleHide = false;
-gPulseTest = false;
 
 --Create directories..
 local controllerConfigFolder = string.format('%sconfig/addons/%s/resources/controllers', AshitaCore:GetInstallPath(), addon.name);

@@ -84,6 +84,3 @@ Make sure you don't have any customized layouts from pre-2.0 in Ashita/addons/tC
 Use the xbox_legacy controller profile until you've also upgraded to Ashita 4.16+.
 
 #### More to come as common questions arise.
-
-## v2.21 — Ready Pulse
-Per-binding **Ready Pulse** toggle: pulses an action's icon while it's off cooldown and known. Off by default. Global toggle and per-macro toggle both in the standard Components UI. *Feature developed with AI assistance.*
