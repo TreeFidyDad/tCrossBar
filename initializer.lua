@@ -43,6 +43,9 @@ local defaultSettings = T{
     ShowSkillchainIcon = true,
     ShowSkillchainAnimation = true,
     ShowTrigger = true,
+    ShowReadyPulse = true,
+    ReadyPulseHz = 1.0,
+    ReadyPulseMinAlpha = 0.45,
     ShowPalette = true,
     ShowSinglePalette = false,
 

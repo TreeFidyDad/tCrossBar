@@ -218,6 +218,13 @@ function Element:RenderIcon(sprite)
         local opacity = d3dwhite;
         if (gSettings.ShowFade) and (self.Binding.ShowFade) and (not self.State.Ready) then
             opacity = layout.FadeOpacity;
+        elseif (gSettings.ShowReadyPulse) and (self.Binding.ShowReadyPulse) and (self.State.Ready) and (self.State.Available) then
+            local floor = gSettings.ReadyPulseMinAlpha or 0.45;
+            if (floor < 0) then floor = 0; elseif (floor > 1) then floor = 1; end
+            local hz = gSettings.ReadyPulseHz or 1.0;
+            local wave = 0.5 + 0.5 * math.sin(os.clock() * hz * 2 * math.pi);
+            local alpha = math.floor((floor + (1 - floor) * wave) * 255 + 0.5);
+            opacity = d3d8.D3DCOLOR_ARGB(alpha, 255, 255, 255);
         end
         sprite:Draw(icon.Texture, icon.Rect, icon.Scale, nil, 0.0, vec_position, opacity);
     end

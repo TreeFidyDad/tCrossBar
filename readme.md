@@ -84,3 +84,12 @@ Make sure you don't have any customized layouts from pre-2.0 in Ashita/addons/tC
 Use the xbox_legacy controller profile until you've also upgraded to Ashita 4.16+.
 
 #### More to come as common questions arise.
+
+## Fork additions (TreeFidyDad)
+
+This fork adds a **Ready Pulse** effect that pulses an icon's brightness while the bound action is off cooldown and usable. Best on long-cooldown abilities like Steal, Mug, Provoke, Berserk, where you want a peripheral-vision "it's up" cue without staring at the timer.
+
+- Enable globally: **/tc** → Components tab → check **Ready Pulse**.
+- Enable per-macro: open the binding for the macro (e.g. Steal on R2+X), Appearance tab → check **Ready Pulse**. Off by default so existing macros are unchanged.
+- Tuning lives in `settings.lua` (or via `/tc` reload after editing): `ReadyPulseHz` (pulses/sec, default 1.0), `ReadyPulseMinAlpha` (dimmest point of the pulse, default 0.45).
+- Only pulses when the icon is both off cooldown AND the action is known/available. Does not pulse during the post-press Trigger flash.
